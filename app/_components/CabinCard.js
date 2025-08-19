@@ -1,7 +1,7 @@
 import { UsersIcon } from "@heroicons/react/24/solid";
 
-function CabinCard({ cabin }) {
-  const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
+function PropertyCard({ property }) {
+  const { id, name, maxCapacity, regularPrice, discount, image } = property;
 
   return (
     <div className="flex border-primary-800 border">
@@ -43,7 +43,7 @@ function CabinCard({ cabin }) {
 
         <div className="bg-primary-950 border-t border-t-primary-800 text-right">
           <a
-            href={`/cabins/${id}`}
+            href={`/properties/${id}`}
             className="border-l border-primary-800 py-4 px-6 inline-block hover:bg-accent-600 transition-all hover:text-primary-900"
           >
             Details & reservation &rarr;
@@ -54,4 +54,4 @@ function CabinCard({ cabin }) {
   );
 }
 
-export default CabinCard;
+export default PropertyCard;
