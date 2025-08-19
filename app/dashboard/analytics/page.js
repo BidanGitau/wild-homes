@@ -7,10 +7,6 @@ import {
   CreditCard,
 } from "lucide-react";
 
-export const metadata = {
-  title: "Analytics & Reports",
-};
-
 export default function Page() {
   // Sample data for reports
   const rentCollectionData = [
