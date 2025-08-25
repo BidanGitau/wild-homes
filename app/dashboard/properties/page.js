@@ -1,9 +1,5 @@
 import HouseCard from "@/app/_components/HouseCard";
 
-export const metadata = {
-  title: "Properties",
-};
-
 export default function Page() {
   // Sample house data for the agent
   const properties = [

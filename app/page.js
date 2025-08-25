@@ -8,9 +8,9 @@ export default function Page() {
       <Image
         src={bg}
         fill
+        quality={10}
         placeholder="blur"
-        quality={80}
-        className="object-cover object-top"
+        className=""
         alt="Professional workspace background"
       />
 

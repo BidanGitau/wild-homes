@@ -1,28 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind v4 base */
+@import "tailwindcss";
 
+/* Project theme tokens */
+@theme {
+  /* Primary */
+  --color-primary-50: #ffffff;
+  --color-primary-100: #f0f9ff;
+  --color-primary-200: #e0f2fe;
+  --color-primary-300: #b3e5fc;
+  --color-primary-400: #81d4fa;
+  --color-primary-500: #4fc3f7;
+  --color-primary-600: #03a9f4;
+  --color-primary-700: #0288d1;
+  --color-primary-800: #01579b;
+  --color-primary-900: #014f86;
+  --color-primary-950: #014f86;
+
+  /* Secondary */
+  --color-secondary-50: #f8fafc;
+  --color-secondary-100: #f1f5f9;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e1;
+  --color-secondary-400: #94a3b8;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #475569;
+  --color-secondary-700: #334155;
+  --color-secondary-800: #1e293b;
+  --color-secondary-900: #0f172a;
+  --color-secondary-950: #020617;
+
+  /* Blue */
+  --color-blue-50: #f0f9ff;
+  --color-blue-100: #e0f2fe;
+  --color-blue-200: #bae6fd;
+  --color-blue-300: #7dd3fc;
+  --color-blue-400: #38bdf8;
+  --color-blue-500: #0ea5e9;
+  --color-blue-600: #0284c7;
+  --color-blue-700: #0369a1;
+  --color-blue-800: #075985;
+  --color-blue-900: #0c4a6e;
+  --color-blue-950: #082f49;
+}
+
+/* Components */
 @layer components {
   .spinner {
     margin: 3.2rem auto 1.6rem;
     width: 60px;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 8px solid theme("colors.blue.700");
-    border-right-color: theme("colors.blue.200");
+    border: 8px solid var(--color-blue-700);
+    border-right-color: var(--color-blue-200);
     animation: rotate 1s infinite linear;
   }
-
   .spinner-mini {
     margin: 0;
     width: 20px;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 2px solid theme("colors.blue.200");
+    border: 2px solid var(--color-blue-200);
     border-right-color: transparent;
     animation: rotate 1s infinite linear;
   }
-
   @keyframes rotate {
     to {
       transform: rotate(1turn);
@@ -30,17 +70,10 @@
   }
 }
 
-/* For data picker */
-
+/* Date picker variables */
 .rdp {
   --rdp-cell-size: 32px !important;
-  --rdp-accent-color: theme("colors.blue.500") !important;
-  --rdp-background-color: theme("colors.blue.600") !important;
+  --rdp-accent-color: var(--color-blue-500) !important;
+  --rdp-background-color: var(--color-blue-600) !important;
   margin: 0 !important;
-}
-
-/* White background for body */
-body {
-  background-color: theme("colors.primary.50");
-  color: theme("colors.secondary.900");
 }

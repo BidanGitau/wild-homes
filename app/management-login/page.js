@@ -1,4 +1,4 @@
-import SignInButton from "@/app/_components/SignInButton";
+import LoginForm from "@/app/_components/LoginForm";
 
 export const metadata = {
   title: "Management Login",
@@ -14,16 +14,11 @@ export default function Page() {
         <p className="text-center text-secondary-700 mb-8">
           Sign in to access your property management dashboard
         </p>
-        <div className="space-y-6">
-          <SignInButton />
-          <div className="text-center">
-            <a
-              href="/tenant-login"
-              className="text-blue-600 hover:text-blue-800"
-            >
-              Are you a tenant? Sign in here
-            </a>
-          </div>
+        <LoginForm type="Management" />
+        <div className="text-center mt-4">
+          <a href="/tenant-login" className="text-blue-600 hover:text-blue-800">
+            Are you a tenant? Sign in here
+          </a>
         </div>
       </div>
     </div>

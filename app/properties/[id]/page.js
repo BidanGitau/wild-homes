@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+import Link from "next/link";
 import {
   Eye,
   Users,
@@ -8,19 +10,13 @@ import {
   CreditCard,
   AlertTriangle,
 } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
-
-export async function generateMetadata({ params }) {
-  return {
-    title: "Property Details",
-  };
-}
 
 export default function Page({ params }) {
+  const { id } = params;
+
   // Sample property data (in a real app, this would come from a database)
   const property = {
-    id: params.id,
+    id: id,
     name: "Downtown Apartment",
     type: "2 bedroom",
     maxCapacity: 4,
@@ -90,8 +86,8 @@ export default function Page({ params }) {
     alert(`Reminder sent to ${tenantName}`);
   };
 
-  // State for image error handling
-  const [imageError, setImageError] = useState(false);
+  // State for image error handling (client-only UI pattern)
+  const [imageError, setImageError] = React.useState(false);
 
   return (
     <div className="space-y-8">

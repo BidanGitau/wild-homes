@@ -30,8 +30,8 @@ export default function Page() {
           </p>
           <p>
             This is where professional property management meets simplicity.
-            It's a place where technology enhances the rental experience for
-            everyone involved, making property management less stressful and
+            It&apos;s a place where technology enhances the rental experience
+            for everyone involved, making property management less stressful and
             more profitable.
           </p>
         </div>

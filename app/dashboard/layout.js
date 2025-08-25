@@ -6,9 +6,11 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <div className="grid grid-cols-[16rem_1fr] h-full gap-8">
-      <SideNavigation />
-      <div className="py-10">{children}</div>
+    <div className="flex h-screen">
+      <div className="h-screen w-64 shrink-0">
+        <SideNavigation />
+      </div>
+      <div className="flex-1 overflow-y-auto py-10 px-8">{children}</div>
     </div>
   );
 }

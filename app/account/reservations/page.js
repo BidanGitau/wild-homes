@@ -1,3 +1,4 @@
+import Link from "next/link";
 import RentalCard from "@/app/_components/RentalCard";
 
 export const metadata = {
@@ -48,9 +49,9 @@ export default function Page() {
       {bookings.length === 0 ? (
         <p className="text-lg">
           You have no rentals yet. Check out our{" "}
-          <a className="underline text-blue-600" href="/properties">
+          <Link className="underline text-blue-600" href="/properties">
             rental properties &rarr;
-          </a>
+          </Link>
         </p>
       ) : (
         <ul className="space-y-6">
